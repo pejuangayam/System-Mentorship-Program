@@ -1,0 +1,122 @@
+/* --- Global & Body Styles --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Light background for the page */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Container for Centering and Sizing --- */
+.login-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    width: 100%; /* Take full width on small screens */
+    max-width: 400px; /* Max width on larger screens */
+    text-align: center;
+}
+
+/* --- Logo/Title Styling --- */
+.logo {
+    color: #007bff; /* Primary blue color */
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* --- Form Specific Styles --- */
+.login-form h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels to the left */
+}
+
+.input-group label {
+    display: block; /* Make label take its own line */
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Padding is included in width */
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* --- Button Styling --- */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login {
+    background-color: #28a745; /* Green for LOGIN */
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-login:hover {
+    background-color: #218838;
+}
+
+/* --- Register Link Styling --- */
+.register-prompt {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.btn-register {
+    color: #007bff; /* Blue accent for register */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.btn-register:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* --- Responsiveness for Extra Small Screens --- */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+        box-shadow: none; /* Remove shadow on very small screens for better edge-to-edge feel */
+    }
+    .logo {
+        font-size: 1.6rem;
+    }
+}
