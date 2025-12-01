@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Mentorship Platform</title>
+  <link rel="stylesheet" href="css/dashboardMentee.css" />
+</head>
+<body>
+  <!-- === HEADER === -->
+  <header class="main-header">
+    <div class="logo-area"><h1>MentorshipApp</h1></div>
+    <nav class="user-nav">
+      <a href="#profile">My Profile</a>
+      <a href="#meetings">Meetings</a>
+      <a href="#messages">Inbox</a>
+      <a href="login.html" class="btn btn-logout">Logout</a>
+    </nav>
+    <button class="menu-toggle">☰</button>
+  </header>
+
+  <!-- === MAIN LAYOUT === -->
+  <main class="dashboard-main-content">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3 class="role-title">Welcome, Mentee!</h3>
+      <nav class="role-nav">
+        <a href="#discovery" class="active-link">🤝 Mentor Discovery</a>
+        <a href="#requests">📜 My Requests</a>
+        <a href="#notes">📝 Notes</a>
+        <a href="#goals">🎯 My Goals</a>
+        <a href="#mentor">👥 My Mentor</a>
+      </nav>
+    </aside>
+
+    <!-- Content Area -->
+    <section class="content-area">
+      <h2 id="page-title">👋 Dashboard Overview</h2>
+
+      <!-- Summary Cards -->
+      <div class="summary-cards">
+        <div class="card">
+          <h3>Pending Requests</h3>
+          <p class="count">3</p>
+          <a href="#requests">View Details</a>
+        </div>
+        <div class="card">
+          <h3>Upcoming Meeting</h3>
+          <p class="count">Today, 2:00 PM</p>
+          <a href="#meetings">Join Now</a>
+        </div>
+        <div class="card">
+          <h3>Unread Messages</h3>
+          <p class="count">5</p>
+          <a href="#messages">Go to Inbox</a>
+        </div>
+      </div>
+
+      <!-- Featured Mentors -->
+      <div class="widget-section">
+        <h3 class="section-header">Featured Mentors</h3>
+        <div class="mentor-list">
+          <div class="mentor-card">
+            <h4>Jane Doe (Admin)</h4>
+            <p>Department: Technology</p>
+            <p>Skills: Java, UI/UX Design</p>
+            <button class="btn btn-message">View Profile</button>
+          </div>
+          <div class="mentor-card">
+            <h4>John Smith (Mentor)</h4>
+            <p>Department: Finance</p>
+            <p>Skills: Budgeting, Reporting</p>
+            <button class="btn btn-message">View Profile</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
