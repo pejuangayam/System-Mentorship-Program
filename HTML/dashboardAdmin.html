@@ -12,6 +12,7 @@
   <header class="main-header">
     <div class="logo-area"><h1>MentorshipApp</h1></div>
     <nav class="user-nav">
+        <a href="#profile" class="nav-link">My Profile</a>
       <a href="login.html" class="btn-logout">Logout</a>
     </nav>
   </header>
@@ -29,15 +30,15 @@
         <a href="#" class="active-link">
           <span class="nav-icon">🏠</span> Dashboard
         </a>
-        <a href="#professions">
+        <a href="addProfession.html">
           <span class="nav-icon">🧰</span> Add Professions
         </a>
-        <a href="#profile-edit">
+        <a href="editProfileAdmin.html">
           <span class="nav-icon">👤</span> Edit Profile
         </a>
       </nav>
     </aside>
-    
+
     <!-- MAIN CONTENT AREA -->
     <section class="content-area">
       <h2 id="page-title">Admin Dashboard</h2>
@@ -46,21 +47,22 @@
       <div class="stats-grid">
         <div class="stat-card">
           <h3>Total Users</h3>
-          <div class="number">2,547</div>
+          <div class="number">2</div>
         </div>
         <div class="stat-card mentors">
           <h3>Total Mentors</h3>
-          <div class="number">1,089</div>
+          <div class="number">1</div>
         </div>
         <div class="stat-card mentees">
           <h3>Total Mentees</h3>
-          <div class="number">1,432</div>
+          <div class="number">1</div>
         </div>
       </div>
 
       <!-- MANAGE USERS SECTION TITLE -->
       <div class="section-title-container">
         <h3 class="section-title">Manage Users</h3>
+        <p class="section-subtitle">Search, filter, and manage all users in the platform</p>
       </div>
 
       <!-- SEARCH & FILTER BAR -->
@@ -96,7 +98,7 @@
         </select>
       </section>
 
-      <!-- USER TABLE -->
+      <!-- USER TABLE (Only 2 users: 1 mentor, 1 mentee) -->
       <section class="user-table-container">
         <table class="user-table">
           <thead>
@@ -110,6 +112,7 @@
             </tr>
           </thead>
           <tbody>
+            <!-- User 1: Mentor -->
             <tr>
               <td class="row-number">1</td>
               <td>John Doe</td>
@@ -117,10 +120,12 @@
               <td>Information Technology</td>
               <td>john@example.com</td>
               <td>
-                <button class="table-btn">View</button>
+                <a href="viewUser.html" class="table-btn">View</a>
                 <button class="table-btn delete">Delete</button>
               </td>
             </tr>
+            
+            <!-- User 2: Mentee -->
             <tr>
               <td class="row-number">2</td>
               <td>Sarah Mohd</td>
@@ -128,40 +133,7 @@
               <td>Business</td>
               <td>sarah@example.com</td>
               <td>
-                <button class="table-btn">View</button>
-                <button class="table-btn delete">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="row-number">3</td>
-              <td>Robert Chen</td>
-              <td><span class="badge it">Mentor</span></td>
-              <td>Software Engineering</td>
-              <td>robert@example.com</td>
-              <td>
-                <button class="table-btn">View</button>
-                <button class="table-btn delete">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="row-number">4</td>
-              <td>Maria Garcia</td>
-              <td><span class="badge business">Mentee</span></td>
-              <td>Marketing</td>
-              <td>maria@example.com</td>
-              <td>
-                <button class="table-btn">View</button>
-                <button class="table-btn delete">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="row-number">5</td>
-              <td>Alex Johnson</td>
-              <td><span class="badge it">Mentor</span></td>
-              <td>Data Science</td>
-              <td>alex@example.com</td>
-              <td>
-                <button class="table-btn">View</button>
+                <a href="viewUserMentee.html" class="table-btn">View</a>
                 <button class="table-btn delete">Delete</button>
               </td>
             </tr>
@@ -172,7 +144,7 @@
       <!-- PAGINATION CONTROLS -->
       <div class="pagination-container">
         <div class="pagination-info">
-          Showing <strong>1-5</strong> of <strong>2,547</strong> users
+          Showing <strong>1-2</strong> of <strong>2</strong> users
         </div>
         
         <div class="pagination-controls">
@@ -182,15 +154,9 @@
           
           <div class="page-numbers">
             <button class="pagination-btn active">1</button>
-            <button class="pagination-btn">2</button>
-            <button class="pagination-btn">3</button>
-            <button class="pagination-btn">4</button>
-            <button class="pagination-btn">5</button>
-            <span class="pagination-dots">...</span>
-            <button class="pagination-btn">510</button>
           </div>
           
-          <button class="pagination-btn">
+          <button class="pagination-btn" disabled>
             Next →
           </button>
         </div>
