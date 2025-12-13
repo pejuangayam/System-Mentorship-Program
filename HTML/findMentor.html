@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result & Mentor | Mentorship Platform</title>
+    <link rel="stylesheet" href="css/notesMentee.css" />
+    <link rel="stylesheet" href="css/find.css" />
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-area"><h1>MentorshipApp</h1></div>
+        <nav class="user-nav">
+          <a href="profileMentee.html">My Profile</a>
+          <a href="meetingMentee.html">Meetings</a>
+          <a href="inboxMentee.html">Inbox</a>
+          <a href="login.html" class="btn btn-logout">Logout</a>
+        </nav>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <main class="dashboard-main-content">
+        <aside class="sidebar">
+          <h3 class="role-title">Welcome, Mentee!</h3>
+            <nav class="role-nav">
+              <a href="index.html">🤝 Dashboard</a>
+              <a href="notesMentee.html">📝 Notes</a>
+              <a href="meetingMentee.html">📷 Join Meet</a>
+              <a href="findMentor.html" class="active-link">👥 Find Mentor</a>
+              <a href="inboxMentee.html">📩 My Inbox</a>
+            </nav>
+        </aside>
+
+        <section class="content-area">
+
+            <div class="notes-container widget-section mb-5">
+                <h2 id="page-title" class="content-header">Status</h2>
+
+                <div class="notes-search-container search-bar-container d-flex align-items-center mb-3">
+                    <label class="me-2 text-secondary fw-bold small">Find Mentor:</label>
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        id="notes-search-input"
+                        onkeyup="filterNotesTable()"
+                        class="search-input"
+                    />
+                </div>
+                
+                <div class="table-wrapper">
+                    <table class="notes-table" id="notes-table">
+                        <thead>
+                            <tr class="text-center">
+                                <th class="col-no">No.</th>
+                                <th class="col-name">Name</th>
+                                <th class="col-email">Email</th>
+                                <th class="col-status">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mentor-section widget-section">
+                <h2 class="content-header">Find a Mentor</h2>
+                <p class="text-secondary mb-4">Browse expert mentors and book your learning session</p>
+
+                <div class="search-bar-container">
+                    <input
+                        type="text"
+                        placeholder="Search by name, expertise, or keywords..."
+                        id="mentor-search-input"
+                        onkeyup="filterMentors()"
+                        class="search-input"
+                    />
+                </div>
+
+                <div class="filters-container d-flex flex-wrap align-items-center mt-3 mb-4">
+                    <span class="me-3 fw-bold small text-dark">Sort by:</span>
+                    <div class="sort-options me-4">
+                        <button class="btn btn-small sort-btn active" data-sort-by="rating">Rating</button>
+                        <button class="btn btn-small sort-btn" data-sort-by="sessions">Experience</button>
+                    </div>
+
+                    <span class="me-3 fw-bold small text-dark">Expertise:</span>
+                    <div class="expertise-options d-flex flex-wrap gap-2" id="expertise-filters">
+                        <button class="btn btn-small filter-btn active" data-filter="all">All</button>
+                        </div>
+                </div>
+
+                <div class="mentor-cards-grid" id="mentor-list">
+                    </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/find.js"></script>
+</body>
+</html>
