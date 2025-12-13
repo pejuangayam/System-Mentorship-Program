@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcements | Mentorship Platform</title>
+  <link rel="stylesheet" href="css/Announcement.css">
+</head>
+<body>
+
+  <!-- === HEADER === -->
+  <header class="main-header">
+    <div class="logo-area"><h1>MentorshipApp</h1></div>
+    <nav class="user-nav">
+      <a href="#profile" class="nav-link">My Profile</a>
+      <a href="login.html" class="btn btn-logout">Logout</a>
+    </nav>
+    <button class="menu-toggle">☰</button>
+  </header>
+
+  <!-- === MAIN CONTENT === -->
+  <main class="dashboard-main-content">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h3 class="role-title">Welcome, Mentor!</h3>
+      <nav class="role-nav">
+        <a href="dashboardMentor.html" class="nav-item">🏠 Dashboard</a>
+        <a href="MyMentees.html" class="nav-item">👥 My Mentees</a>
+        <a href="PendingRequest.html" class="nav-item">📩 Pending Requests <span class="badge">3</span></a>
+        <a href="ScheduleMeeting.html" class="nav-item">📅 Schedule Meeting</a>
+        <a href="Announcement.html" class="nav-item active-link">📢 Announcements</a>
+        <a href="Report.html" class="nav-item">📊 Report</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <section class="content-area">
+      <h2 id="page-title">📢 Announcements</h2>
+
+      <!-- Create Announcement Section -->
+      <div class="widget-section" style="margin-bottom: 30px;">
+        <h3 class="section-header">✏️ Create New Announcement</h3>
+        
+        <div class="announcement-form">
+          <div class="form-group">
+            <label for="announcementTitle">Announcement Title *</label>
+            <input type="text" id="announcementTitle" class="form-input" placeholder="e.g., Important Update on Mentorship Sessions">
+          </div>
+
+          <div class="form-group">
+            <label for="announcementAudience">Send To *</label>
+            <select id="announcementAudience" class="form-input">
+              <option value="">Select audience...</option>
+              <option value="all">All My Mentees</option>
+              <option value="jane">Jane Doe</option>
+              <option value="mark">Mark Smith</option>
+              <option value="sarah">Sarah Lee</option>
+              <option value="tom">Tom Wilson</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="announcementPriority">Priority Level</label>
+            <select id="announcementPriority" class="form-input">
+              <option value="normal">Normal</option>
+              <option value="important">Important</option>
+              <option value="urgent">Urgent</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="announcementContent">Message *</label>
+            <textarea id="announcementContent" class="form-textarea" rows="6" placeholder="Type your announcement message here..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="sendEmail">
+              Send email notification
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-accept btn-large">📤 Post Announcement</button>
+            <button class="btn btn-decline btn-large">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Announcements Filter -->
+      <div class="filter-section">
+        <div class="filter-group">
+          <label for="filterType">Filter:</label>
+          <select id="filterType" class="filter-select">
+            <option value="all">All Announcements</option>
+            <option value="mine">My Announcements</option>
+            <option value="system">System Announcements</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="sortBy">Sort By:</label>
+          <select id="sortBy" class="filter-select">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="priority">Priority</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Announcements List -->
+      <div class="widget-section">
+        <h3 class="section-header">📋 Recent Announcements</h3>
+
+        <!-- Announcement Card 2 - Important -->
+        <div class="announcement-card important">
+          <div class="announcement-header">
+            <div class="announcement-priority-badge important">⚠️ IMPORTANT</div>
+            <div class="announcement-date">Posted: Dec 10, 2025 • 10:15 AM</div>
+          </div>
+          <h4 class="announcement-title">New Meeting Guidelines</h4>
+          <p class="announcement-author">By: You (Mentor)</p>
+          <div class="announcement-content">
+            <p>Dear mentees, I've updated our meeting guidelines to ensure more productive sessions. Please review the following:</p>
+            <ul>
+              <li>Prepare agenda items at least 24 hours before our meeting</li>
+              <li>Share any relevant documents or materials in advance</li>
+              <li>Be punctual - meetings will start on time</li>
+              <li>Come with specific questions or topics to discuss</li>
+            </ul>
+            <p>Looking forward to our continued collaboration!</p>
+          </div>
+          <div class="announcement-footer">
+            <div class="announcement-stats">
+              <span>👁️ 12 views</span>
+              <span>👥 Sent to: All My Mentees</span>
+            </div>
+            <div class="announcement-actions">
+              <button class="btn-text">✏️ Edit</button>
+              <button class="btn-text">🗑️ Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Announcement Card 3 - Normal -->
+        <div class="announcement-card normal">
+          <div class="announcement-header">
+            <div class="announcement-priority-badge normal">📌 NOTICE</div>
+            <div class="announcement-date">Posted: Dec 8, 2025 • 4:45 PM</div>
+          </div>
+          <h4 class="announcement-title">December Holiday Break Schedule</h4>
+          <p class="announcement-author">By: You (Mentor)</p>
+          <div class="announcement-content">
+            <p>Hello everyone! Just a friendly reminder about my availability during the holiday break:</p>
+            <p><strong>Available:</strong> December 16-20<br>
+            <strong>Limited Availability:</strong> December 21-23<br>
+            <strong>Unavailable:</strong> December 24-31</p>
+            <p>Please plan accordingly if you need to schedule meetings. Regular schedule resumes on January 2, 2026.</p>
+          </div>
+          <div class="announcement-footer">
+            <div class="announcement-stats">
+              <span>👁️ 18 views</span>
+              <span>👥 Sent to: All My Mentees</span>
+            </div>
+            <div class="announcement-actions">
+              <button class="btn-text">✏️ Edit</button>
+              <button class="btn-text">🗑️ Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Announcement Card 4 - Normal -->
+        <div class="announcement-card normal">
+          <div class="announcement-header">
+            <div class="announcement-priority-badge normal">📌 NOTICE</div>
+            <div class="announcement-date">Posted: Dec 5, 2025 • 9:20 AM</div>
+          </div>
+          <h4 class="announcement-title">New Resource Library Available</h4>
+          <p class="announcement-author">By: Program Coordinator</p>
+          <div class="announcement-content">
+            <p>We're excited to announce that a new resource library has been added to the mentorship platform! You can now access:</p>
+            <ul>
+              <li>Industry reports and white papers</li>
+              <li>Career development guides</li>
+              <li>Technical skill tutorials</li>
+              <li>Interview preparation materials</li>
+            </ul>
+            <p>Check out the Resources section in your dashboard to explore these materials.</p>
+          </div>
+          <div class="announcement-footer">
+            <div class="announcement-stats">
+              <span>👁️ 67 views</span>
+              <span>👥 Sent to: All Mentors & Mentees</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Announcement Card 5 - Important -->
+        <div class="announcement-card important">
+          <div class="announcement-header">
+            <div class="announcement-priority-badge important">⚠️ IMPORTANT</div>
+            <div class="announcement-date">Posted: Nov 28, 2025 • 1:00 PM</div>
+          </div>
+          <h4 class="announcement-title">Mid-Semester Evaluation Required</h4>
+          <p class="announcement-author">By: You (Mentor)</p>
+          <div class="announcement-content">
+            <p>Dear mentees, it's time for our mid-semester evaluation! Please complete the evaluation form by December 15, 2025. This helps us:</p>
+            <ul>
+              <li>Assess our mentorship progress</li>
+              <li>Identify areas for improvement</li>
+              <li>Set goals for the second half of the semester</li>
+            </ul>
+            <p>The form takes approximately 10 minutes to complete. Your honest feedback is greatly appreciated!</p>
+          </div>
+          <div class="announcement-footer">
+            <div class="announcement-stats">
+              <span>👁️ 15 views</span>
+              <span>👥 Sent to: All My Mentees</span>
+            </div>
+            <div class="announcement-actions">
+              <button class="btn-text">✏️ Edit</button>
+              <button class="btn-text">🗑️ Delete</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</html>
