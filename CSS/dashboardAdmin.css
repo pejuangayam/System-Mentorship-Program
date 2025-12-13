@@ -386,16 +386,8 @@ body {
     margin-top: 8px;
   }
 }
- /* Remove these styles: */
-/*
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 30px 40px;
-}
-*/
 
-/* Update stats-grid to work within content-area */
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -739,3 +731,4 @@ body {
   content: "↓";
   color: #ffffff;
 }
+
