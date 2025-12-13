@@ -12,7 +12,6 @@
   <header class="main-header">
     <div class="logo-area"><h1>MentorshipApp</h1></div>
     <nav class="user-nav">
-        <a href="#profile" class="nav-link">My Profile</a>
       <a href="login.html" class="btn-logout">Logout</a>
     </nav>
   </header>
@@ -30,25 +29,39 @@
         <a href="#" class="active-link">
           <span class="nav-icon">🏠</span> Dashboard
         </a>
-        <a href="#manage-users">
-          <span class="nav-icon">👥</span> Manage Users
-        </a>
         <a href="#professions">
           <span class="nav-icon">🧰</span> Add Professions
         </a>
         <a href="#profile-edit">
           <span class="nav-icon">👤</span> Edit Profile
         </a>
-        <a href="#reports">
-          <span class="nav-icon">📊</span> Reports
-        </a>
       </nav>
-      
     </aside>
-
-    <!-- MAIN CONTENT -->
+    
+    <!-- MAIN CONTENT AREA -->
     <section class="content-area">
-      <h2 id="page-title">⚙️ Admin Dashboard</h2>
+      <h2 id="page-title">Admin Dashboard</h2>
+      
+      <!-- STATS SECTION -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Total Users</h3>
+          <div class="number">2,547</div>
+        </div>
+        <div class="stat-card mentors">
+          <h3>Total Mentors</h3>
+          <div class="number">1,089</div>
+        </div>
+        <div class="stat-card mentees">
+          <h3>Total Mentees</h3>
+          <div class="number">1,432</div>
+        </div>
+      </div>
+
+      <!-- MANAGE USERS SECTION TITLE -->
+      <div class="section-title-container">
+        <h3 class="section-title">Manage Users</h3>
+      </div>
 
       <!-- SEARCH & FILTER BAR -->
       <section class="search-filter-bar">
@@ -73,6 +86,14 @@
           <option value="newest">Newest First</option>
           <option value="oldest">Oldest First</option>
         </select>
+        
+        <!-- Rows per page selector -->
+        <select class="filter-select">
+          <option value="5">5 per page</option>
+          <option value="10">10 per page</option>
+          <option value="25">25 per page</option>
+          <option value="50">50 per page</option>
+        </select>
       </section>
 
       <!-- USER TABLE -->
@@ -80,6 +101,7 @@
         <table class="user-table">
           <thead>
             <tr>
+              <th width="50">#</th>
               <th>Name</th>
               <th>Role</th>
               <th>Profession</th>
@@ -89,6 +111,7 @@
           </thead>
           <tbody>
             <tr>
+              <td class="row-number">1</td>
               <td>John Doe</td>
               <td><span class="badge it">Mentor</span></td>
               <td>Information Technology</td>
@@ -99,6 +122,7 @@
               </td>
             </tr>
             <tr>
+              <td class="row-number">2</td>
               <td>Sarah Mohd</td>
               <td><span class="badge business">Mentee</span></td>
               <td>Business</td>
@@ -109,6 +133,7 @@
               </td>
             </tr>
             <tr>
+              <td class="row-number">3</td>
               <td>Robert Chen</td>
               <td><span class="badge it">Mentor</span></td>
               <td>Software Engineering</td>
@@ -119,6 +144,7 @@
               </td>
             </tr>
             <tr>
+              <td class="row-number">4</td>
               <td>Maria Garcia</td>
               <td><span class="badge business">Mentee</span></td>
               <td>Marketing</td>
@@ -128,11 +154,50 @@
                 <button class="table-btn delete">Delete</button>
               </td>
             </tr>
+            <tr>
+              <td class="row-number">5</td>
+              <td>Alex Johnson</td>
+              <td><span class="badge it">Mentor</span></td>
+              <td>Data Science</td>
+              <td>alex@example.com</td>
+              <td>
+                <button class="table-btn">View</button>
+                <button class="table-btn delete">Delete</button>
+              </td>
+            </tr>
           </tbody>
         </table>
       </section>
 
+      <!-- PAGINATION CONTROLS -->
+      <div class="pagination-container">
+        <div class="pagination-info">
+          Showing <strong>1-5</strong> of <strong>2,547</strong> users
+        </div>
+        
+        <div class="pagination-controls">
+          <button class="pagination-btn" disabled>
+            ← Previous
+          </button>
+          
+          <div class="page-numbers">
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn">4</button>
+            <button class="pagination-btn">5</button>
+            <span class="pagination-dots">...</span>
+            <button class="pagination-btn">510</button>
+          </div>
+          
+          <button class="pagination-btn">
+            Next →
+          </button>
+        </div>
+      </div>
+
     </section>
+    <!-- END CONTENT AREA -->
 
   </main>
 
