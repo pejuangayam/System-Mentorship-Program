@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Edit Profile | Mentorship Platform</title>
   <link rel="stylesheet" href="css/dashboardAdmin.css">
-  <link rel="stylesheet" href="css/profileAdmin.css">
+  <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
 
@@ -30,18 +30,18 @@
         <a href="dashboardAdmin.html">
           <span class="nav-icon">🏠</span> Dashboard
         </a>
-        <a href="addProfession.html">
-          <span class="nav-icon">🧰</span> Add Professions
+        <a href="profession.html">
+          <span class="nav-icon">🧰</span> Professions
         </a>
-        <a href="#" class="active-link">
-          <span class="nav-icon">👤</span> Edit Profile
+        <a href="profileAdmin.html" class="active-link">
+          <span class="nav-icon">👤</span> Profile
         </a>
       </nav>
     </aside>
     
     <!-- MAIN CONTENT AREA -->
     <section class="content-area">
-      <h2 id="page-title">Edit Profile</h2>
+      <h2 id="page-title">My Profile</h2>
       
       <div class="profile-container">
         <div class="profile-card">
@@ -63,15 +63,9 @@
               
               <div class="form-grid">
                 <div class="form-group">
-                  <label for="firstName" class="form-label">First Name *</label>
-                  <input type="text" id="firstName" name="firstName" class="form-input" value="Admin" required>
+                  <label for="fullName" class="form-label">Full Name *</label>
+                  <input type="text" id="firstName" name="fullName" class="form-input" value="Admin" required>
                 </div>
-                
-                <div class="form-group">
-                  <label for="lastName" class="form-label">Last Name *</label>
-                  <input type="text" id="lastName" name="lastName" class="form-input" value="User" required>
-                </div>
-              </div>
               
               <div class="form-group">
                 <label for="email" class="form-label">Email Address *</label>
@@ -81,25 +75,6 @@
               <div class="form-group">
                 <label for="phone" class="form-label">Phone Number</label>
                 <input type="tel" id="phone" name="phone" class="form-input" value="+1 (555) 123-4567">
-              </div>
-            </div>
-            
-            <div class="form-section">
-              <h3 class="form-section-title">Account Settings</h3>
-              
-              <div class="form-group">
-                <label for="username" class="form-label">Username *</label>
-                <input type="text" id="username" name="username" class="form-input" value="admin_user" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="role" class="form-label">Role</label>
-                <input type="text" id="role" name="role" class="form-input" value="Administrator" disabled>
-              </div>
-              
-              <div class="form-group">
-                <label for="joinDate" class="form-label">Member Since</label>
-                <input type="text" id="joinDate" name="joinDate" class="form-input" value="January 15, 2023" disabled>
               </div>
             </div>
             
