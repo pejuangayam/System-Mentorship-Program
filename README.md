@@ -1,2 +1,2 @@
 # System-Mentorship-Program
-ASS CSC584
+ASS CSC584 Group Sek Kito
