@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folder Content</title>
+  <link rel="stylesheet" href="css/downloader.css" />
+</head>
+<body>
+  <!-- === HEADER === -->
+    <header class="main-header">
+        <div class="logo-area"><h1>MentorshipApp</h1></div>
+        <nav class="user-nav">
+          <a href="profileMentee.html">My Profile</a>
+          <a href="meetingMentee.html">Meetings</a>
+          <a href="inboxMentee.html">Inbox</a>
+          <a href="login.html" class="btn btn-logout">Logout</a>
+        </nav>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <main class="dashboard-main-content">
+        <aside class="sidebar">
+          <h3 class="role-title">Welcome, Mentee!</h3>
+            <nav class="role-nav">
+              <a href="index.html">🏠 Dashboard</a>
+              <a href="notesMentee.html">📝 Notes</a>
+              <a href="meetingMentee.html">📷 Join Meet</a>
+              <a href="findMentor.html" class="active-link">👥 Find Mentor</a>
+              <a href="inboxMentee.html">📩 My Inbox</a>
+            </nav>
+        </aside>
+        
+    <section class="content-area">
+      <div class="notes-container">
+        <button class="btn btn-secondary nav-back-btn" onclick="history.back()">
+          <span class="d-flex align-items-center">🔙</span>
+        </button>
+
+        <h2 id="folder-title" class="content-header">Loading Folder...</h2>
+
+        <div class="table-wrapper">
+          <table class="notes-table" id="folder-content-table">
+            <thead>
+              <tr>
+                <th class="col-name">File Name</th>
+                <th class="col-type">Type</th>
+                <th class="col-size">Size</th>
+                <th class="col-action text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script>
+    // --- Mock Data (Simulating files inside each folder) ---
+    const folderData = {
+        "1": { // DR NUR ASHIKIN
+            name: "DR NUR ASHIKIN",
+            files: [
+                { name: "Week 1 - Topic 1 Notes", type: "PDF", size: "1.2 MB", link: "#" },
+                { name: "Week 2 - Topic 2 Notes", type: "PDF", size: "1.5 MB", link: "#" }
+            ]
+        },
+        "2": { // SIR HARIZ MUQRIZ
+            name: "SIR HARIZ MUQRIZ",
+            files: [] // No files
+        },
+        "4": { // DR AINA NAJWA - PUNCAK ALAM
+            name: "DR AINA NAJWA - PUNCAK ALAM",
+            files: [
+                { name: "Lecture 1", type: "DOCX", size: "800 KB", link: "#" }
+            ]
+        }
+        // Add other folder IDs here as needed
+    };
+
+    // Helper function to get query parameter
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function loadFolderContent() {
+        // 1. Get the folder ID from the URL
+        const folderId = getQueryParam('folder_id');
+        
+        if (!folderId || !folderData[folderId]) {
+            document.getElementById('folder-title').innerText = "Folder Not Found";
+            return;
+        }
+        
+        const folder = folderData[folderId];
+        document.getElementById('folder-title').innerText = `${folder.name}'s Files`;
+        
+        const tableBody = document.querySelector('#folder-content-table tbody');
+        tableBody.innerHTML = '';
+
+        if (folder.files.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="4" class="empty-message">This folder is empty.</td></tr>';
+            return;
+        }
+
+        // 2. Populate the table with files in that folder
+        folder.files.forEach(file => {
+            const row = tableBody.insertRow();
+            row.innerHTML = `
+                <td class="table-cell file-name-cell"><span class="icon me-2">📄</span> ${file.name}</td>
+                <td class="table-cell">${file.type}</td>
+                <td class="table-cell">${file.size}</td>
+                <td class="table-cell text-center">
+                    <a href="${file.link}" class="btn btn-message btn-small" download="${file.name}">Download</a>
+                </td>
+            `;
+        });
+    }
+
+    // Load content when the page is ready
+    document.addEventListener('DOMContentLoaded', loadFolderContent);
+  </script>
+</body>
+</html>

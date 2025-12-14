@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Mentorship Platform</title>
+  <link rel="stylesheet" href="css/dashboardAdmin.css">
+</head>
+<body>
+
+  <!-- === HEADER === -->
+  <header class="main-header">
+    <div class="logo-area"><h1>MentorshipApp</h1></div>
+    <nav class="user-nav">
+      <a href="login.html" class="btn-logout">Logout</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-main-content">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h3 class="role-title">Welcome, Admin!</h3>
+        <p class="role-subtitle">Administrator Panel</p>
+      </div>
+      
+      <nav class="role-nav">
+        <a href="#" class="active-link">
+          <span class="nav-icon">🏠</span> Dashboard
+        </a>
+        <a href="profession.html">
+          <span class="nav-icon">🧰</span> Professions
+        </a>
+        <a href="profileAdmin.html">
+          <span class="nav-icon">👤</span> Profile
+        </a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <section class="content-area">
+      <h2 id="page-title">Admin Dashboard</h2>
+      
+      <!-- STATS SECTION -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Total Users</h3>
+          <div class="number">2</div>
+        </div>
+        <div class="stat-card mentors">
+          <h3>Total Mentors</h3>
+          <div class="number">1</div>
+        </div>
+        <div class="stat-card mentees">
+          <h3>Total Mentees</h3>
+          <div class="number">1</div>
+        </div>
+      </div>
+
+      <!-- MANAGE USERS SECTION TITLE -->
+      <div class="section-title-container">
+        <h3 class="section-title">Manage Users</h3>
+        <p class="section-subtitle">Search, filter, and manage all users in the platform</p>
+      </div>
+
+      <!-- SEARCH & FILTER BAR -->
+      <section class="search-filter-bar">
+        <input type="text" class="search-input" placeholder="Search users by name, email, or ID...">
+
+        <select class="filter-select">
+          <option value="all">All Types</option>
+          <option value="mentor">Mentor</option>
+          <option value="mentee">Mentee</option>
+        </select>
+
+        <select class="filter-select">
+          <option value="all">All Professions</option>
+          <option value="it">Information Technology</option>
+          <option value="business">Business</option>
+          <option value="engineering">Engineering</option>
+        </select>
+
+        <select class="filter-select">
+          <option value="az">Sort: A → Z</option>
+          <option value="za">Sort: Z → A</option>
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
+        
+        <!-- Rows per page selector -->
+        <select class="filter-select">
+          <option value="5">5 per page</option>
+          <option value="10">10 per page</option>
+          <option value="25">25 per page</option>
+          <option value="50">50 per page</option>
+        </select>
+      </section>
+
+      <!-- USER TABLE (Only 2 users: 1 mentor, 1 mentee) -->
+      <section class="user-table-container">
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th width="50">#</th>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Profession</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- User 1: Mentor -->
+            <tr>
+              <td class="row-number">1</td>
+              <td>John Doe</td>
+              <td><span class="badge it">Mentor</span></td>
+              <td>Information Technology</td>
+              <td>john@example.com</td>
+              <td>
+                <a href="viewUser.html" class="table-btn">View</a>
+                <button class="table-btn delete">Delete</button>
+              </td>
+            </tr>
+            
+            <!-- User 2: Mentee -->
+            <tr>
+              <td class="row-number">2</td>
+              <td>Sarah Mohd</td>
+              <td><span class="badge business">Mentee</span></td>
+              <td>Business</td>
+              <td>sarah@example.com</td>
+              <td>
+                <a href="viewUserMentee.html" class="table-btn">View</a>
+                <button class="table-btn delete">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- PAGINATION CONTROLS -->
+      <div class="pagination-container">
+        <div class="pagination-info">
+          Showing <strong>1-2</strong> of <strong>2</strong> users
+        </div>
+        
+        <div class="pagination-controls">
+          <button class="pagination-btn" disabled>
+            ← Previous
+          </button>
+          
+          <div class="page-numbers">
+            <button class="pagination-btn active">1</button>
+          </div>
+          
+          <button class="pagination-btn" disabled>
+            Next →
+          </button>
+        </div>
+      </div>
+
+    </section>
+    <!-- END CONTENT AREA -->
+
+  </main>
+
+</body>
+</html>

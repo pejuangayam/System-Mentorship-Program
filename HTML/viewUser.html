@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View User | Mentorship Platform</title>
+  <link rel="stylesheet" href="css/dashboardAdmin.css">
+  <link rel="stylesheet" href="css/viewUser.css">
+</head>
+<body>
+
+  <!-- === HEADER === -->
+  <header class="main-header">
+    <div class="logo-area"><h1>MentorshipApp</h1></div>
+    <nav class="user-nav">
+        <a href="editProfile.html" class="nav-link">My Profile</a>
+      <a href="login.html" class="btn-logout">Logout</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-main-content">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h3 class="role-title">Welcome, Admin!</h3>
+        <p class="role-subtitle">Administrator Panel</p>
+      </div>
+      
+      <nav class="role-nav">
+        <a href="dashboardAdmin.html">
+          <span class="nav-icon">🏠</span> Dashboard
+        </a>
+        <a href="profession.html">
+          <span class="nav-icon">🧰</span> Professions
+        </a>
+        <a href="editProfile.html">
+          <span class="nav-icon">👤</span> Profile
+        </a>
+      </nav>
+    </aside>
+    
+    <!-- MAIN CONTENT AREA -->
+    <section class="content-area">
+      <h2 id="page-title">User Information</h2>
+      
+      <!-- Simple User Info Card -->
+      <div class="simple-user-card">
+        <div class="user-basic-info">
+          <div class="user-avatar">
+            <div class="avatar-placeholder">JD</div>
+          </div>
+          <div class="user-details">
+            <h1 class="user-name">John Doe</h1>
+            <div class="user-role-badge mentor">Mentor</div>
+          </div>
+        </div>
+        
+        <div class="user-info-grid">
+          <div class="info-row">
+            <span class="info-label">Name:</span>
+            <span class="info-value">John Doe</span>
+          </div>
+          
+          <div class="info-row">
+            <span class="info-label">Role:</span>
+            <span class="info-value">Mentor</span>
+          </div>
+          
+          <div class="info-row">
+            <span class="info-label">Profession:</span>
+            <span class="info-value">Information Technology</span>
+          </div>
+          
+          <div class="info-row">
+            <span class="info-label">Email:</span>
+            <span class="info-value">john@example.com</span>
+          </div>
+          
+          <div class="info-row">
+            <span class="info-label">User ID:</span>
+            <span class="info-value">#USR-001</span>
+          </div>
+        </div>
+        
+        <div class="back-button-container">
+          <a href="dashboardAdmin.html" class="btn btn-outline">Back to List</a>
+        </div>
+      </div>
+
+    </section>
+    <!-- END CONTENT AREA -->
+
+  </main>
+
+</body>
+</html>

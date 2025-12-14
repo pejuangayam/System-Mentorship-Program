@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Mentees | Mentorship Platform</title>
+  <link rel="stylesheet" href="css/MyMentees.css">
+</head>
+<body>
+
+  <!-- === HEADER === -->
+  <header class="main-header">
+    <div class="logo-area"><h1>MentorshipApp</h1></div>
+    <nav class="user-nav">
+      <a href="profileMentor.html" class="nav-link">My Profile</a>
+      <a href="login.html" class="btn btn-logout">Logout</a>
+    </nav>
+    <button class="menu-toggle">☰</button>
+  </header>
+
+  <!-- === MAIN CONTENT === -->
+  <main class="dashboard-main-content">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h3 class="role-title">Welcome, Mentor!</h3>
+      <nav class="role-nav">
+        <a href="dashboardMentor.html" class="nav-item">🏠 Dashboard</a>
+        <a href="Mymentees.html" class="nav-item active-link">👥 My Mentees</a>
+        <a href="PendingRequest.html" class="nav-item">📩 Pending Requests <span class="badge">3</span></a>
+        <a href="ScheduleMeeting.html" class="nav-item">📅 Schedule Meeting</a>
+        <a href="Announcement.html" class="nav-item">📢 Announcements</a>
+        <a href="Report.html" class="nav-item">📊 Report</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <section class="content-area">
+      <h2 id="page-title">👥 My Mentees</h2>
+
+      <!-- Summary Cards -->
+      <div class="summary-cards">
+        <div class="card">
+          <h3>Total Mentees</h3>
+          <p class="count">4</p>
+          <a href="#all">View All</a>
+        </div>
+        <div class="card">
+          <h3>Active Pairs</h3>
+          <p class="count">4</p>
+          <a href="#active">View Active</a>
+        </div>
+        <div class="card">
+          <h3>Total Meetings</h3>
+          <p class="count">28</p>
+          <a href="#history">View History</a>
+        </div>
+      </div>
+
+      <!-- Mentees List -->
+      <div class="widget-section">
+        <h3 class="section-header">👥 All Mentees</h3>
+        
+        <!-- Mentee Card 1 -->
+        <div class="mentee-card">
+          <div class="mentee-header">
+            <div class="mentee-avatar">JD</div>
+            <div class="mentee-basic-info">
+              <h4>Jane Doe</h4>
+              <p class="mentee-details">Computer Science • Year 3</p>
+              <p class="mentee-status"><span class="status-badge active">Active</span></p>
+            </div>
+          </div>
+          <div class="mentee-body">
+            <div class="info-row">
+              <span class="info-label">📧 Email:</span>
+              <span>jane.doe@university.edu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">🎯 Focus Area:</span>
+              <span>Web Development, React</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">📅 Last Meeting:</span>
+              <span>Oct 20, 2025</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">📊 Total Meetings:</span>
+              <span>8 sessions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mentee Card 2 -->
+        <div class="mentee-card">
+          <div class="mentee-header">
+            <div class="mentee-avatar">MS</div>
+            <div class="mentee-basic-info">
+              <h4>Mark Smith</h4>
+              <p class="mentee-details">Business Administration • Year 2</p>
+              <p class="mentee-status"><span class="status-badge active">Active</span></p>
+            </div>
+          </div>
+          <div class="mentee-body">
+            <div class="info-row">
+              <span class="info-label">📧 Email:</span>
+              <span>mark.smith@university.edu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">🎯 Focus Area:</span>
+              <span>Entrepreneurship, Marketing</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">📅 Last Meeting:</span>
+              <span>Nov 5, 2025</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">📊 Total Meetings:</span>
+              <span>6 sessions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mentee Card 3 -->
+        <div class="mentee-card">
+          <div class="mentee-header">
+            <div class="mentee-avatar">SL</div>
+            <div class="mentee-basic-info">
+              <h4>Sarah Lee</h4>
+              <p class="mentee-details">Data Science • Year 4</p>
+              <p class="mentee-status"><span class="status-badge active">Active</span></p>
+            </div>
+          </div>
+          <div class="mentee-body">
+            <div class="info-row">
+              <span class="info-label">📧 Email:</span>
+              <span>sarah.lee@university.edu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">🎯 Focus Area:</span>
+              <span>Machine Learning, Python</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">📅 Last Meeting:</span>
+              <span>Nov 12, 2025</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">📊 Total Meetings:</span>
+              <span>10 sessions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mentee Card 4 -->
+        <div class="mentee-card">
+          <div class="mentee-header">
+            <div class="mentee-avatar">TW</div>
+            <div class="mentee-basic-info">
+              <h4>Tom Wilson</h4>
+              <p class="mentee-details">Software Engineering • Year 1</p>
+              <p class="mentee-status"><span class="status-badge active">Active</span></p>
+            </div>
+          </div>
+          <div class="mentee-body">
+            <div class="info-row">
+              <span class="info-label">📧 Email:</span>
+              <span>tom.wilson@university.edu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">🎯 Focus Area:</span>
+              <span>Programming Basics, Java</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">📅 Last Meeting:</span>
+              <span>Nov 8, 2025</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">📊 Total Meetings:</span>
+              <span>4 sessions</span>
+            </div>
+          </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html

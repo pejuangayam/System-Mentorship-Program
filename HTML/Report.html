@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports & Analytics | Mentorship Platform</title>
+  <link rel="stylesheet" href="css/Report.css">
+</head>
+<body>
+
+  <!-- === HEADER === -->
+  <header class="main-header">
+    <div class="logo-area"><h1>MentorshipApp</h1></div>
+    <nav class="user-nav">
+      <a href="profileMentor.html" class="nav-link">My Profile</a>
+      <a href="login.html" class="btn btn-logout">Logout</a>
+    </nav>
+    <button class="menu-toggle">☰</button>
+  </header>
+
+  <!-- === MAIN CONTENT === -->
+  <main class="dashboard-main-content">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h3 class="role-title">Welcome, Mentor!</h3>
+      <nav class="role-nav">
+        <a href="dashboardMentor.html" class="nav-item">🏠 Dashboard</a>
+        <a href="MyMentees.html" class="nav-item">👥 My Mentees</a>
+        <a href="PendingRequest.html" class="nav-item">📩 Pending Requests <span class="badge">3</span></a>
+        <a href="ScheduleMeeting.html" class="nav-item">📅 Schedule Meeting</a>
+        <a href="Announcement.html" class="nav-item">📢 Announcements</a>
+        <a href="Report.html" class="nav-item active-link">📊 Report</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <section class="content-area">
+      <h2 id="page-title">📊 Reports & Analytics</h2>
+
+      <!-- Report Period Selector -->
+      <div class="report-controls">
+        <div class="period-selector">
+          <button class="period-btn active">This Month</button>
+          <button class="period-btn">Last 3 Months</button>
+          <button class="period-btn">This Year</button>
+          <button class="period-btn">All Time</button>
+        </div>
+        <button class="btn btn-accept">📥 Export Report</button>
+      </div>
+
+      <!-- Overview Statistics -->
+      <div class="stats-overview">
+        <div class="stat-card">
+          <div class="stat-icon" style="background: linear-gradient(135deg, #0d6efd, #0b5ed7);">👥</div>
+          <div class="stat-content">
+            <h3>Total Mentees</h3>
+            <p class="stat-number">4</p>
+            <p class="stat-change positive">+1 this month</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon" style="background: linear-gradient(135deg, #28a745, #20c997);">📅</div>
+          <div class="stat-content">
+            <h3>Total Meetings</h3>
+            <p class="stat-number">28</p>
+            <p class="stat-change positive">+6 this month</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon" style="background: linear-gradient(135deg, #ffc107, #fd7e14);">⏱️</div>
+          <div class="stat-content">
+            <h3>Total Hours</h3>
+            <p class="stat-number">42.5</p>
+            <p class="stat-change positive">+8.5 this month</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon" style="background: linear-gradient(135deg, #17a2b8, #20c997);">⭐</div>
+          <div class="stat-content">
+            <h3>Avg. Rating</h3>
+            <p class="stat-number">4.8</p>
+            <p class="stat-change neutral">Same as last month</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="charts-container">
+        
+        <!-- Meeting Activity Chart -->
+        <div class="chart-widget">
+          <h3 class="chart-title">📈 Meeting Activity (Last 6 Months)</h3>
+          <div class="chart-placeholder">
+            <div class="bar-chart">
+              <div class="bar-group">
+                <div class="bar" style="height: 60%;"></div>
+                <span class="bar-label">Jul</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 70%;"></div>
+                <span class="bar-label">Aug</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 55%;"></div>
+                <span class="bar-label">Sep</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 80%;"></div>
+                <span class="bar-label">Oct</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 85%;"></div>
+                <span class="bar-label">Nov</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 90%;"></div>
+                <span class="bar-label">Dec</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meeting Types Distribution -->
+        <div class="chart-widget">
+          <h3 class="chart-title">📊 Meeting Types Distribution</h3>
+          <div class="chart-placeholder">
+            <div class="pie-chart-data">
+              <div class="pie-item">
+                <div class="pie-color" style="background: #0d6efd;"></div>
+                <div class="pie-info">
+                  <span class="pie-label">Virtual Meetings</span>
+                  <span class="pie-percentage">60% (17)</span>
+                </div>
+              </div>
+              <div class="pie-item">
+                <div class="pie-color" style="background: #28a745;"></div>
+                <div class="pie-info">
+                  <span class="pie-label">In-Person Meetings</span>
+                  <span class="pie-percentage">35% (10)</span>
+                </div>
+              </div>
+              <div class="pie-item">
+                <div class="pie-color" style="background: #ffc107;"></div>
+                <div class="pie-info">
+                  <span class="pie-label">Phone Calls</span>
+                  <span class="pie-percentage">5% (1)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mentee Progress Table -->
+      <div class="widget-section">
+        <h3 class="section-header">📋 Mentee Progress Overview</h3>
+        <table class="mentee-table">
+          <thead>
+            <tr>
+              <th>Mentee Name</th>
+              <th>Total Meetings</th>
+              <th>Hours Spent</th>
+              <th>Last Meeting</th>
+              <th>Progress Status</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="mentee-name-cell">
+                  <div class="mini-avatar">JD</div>
+                  <span>Jane Doe</span>
+                </div>
+              </td>
+              <td>8 sessions</td>
+              <td>12.0 hrs</td>
+              <td>Oct 20, 2025</td>
+              <td><span class="progress-badge excellent">Excellent</span></td>
+              <td>⭐ 4.9</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="mentee-name-cell">
+                  <div class="mini-avatar">MS</div>
+                  <span>Mark Smith</span>
+                </div>
+              </td>
+              <td>6 sessions</td>
+              <td>9.0 hrs</td>
+              <td>Nov 5, 2025</td>
+              <td><span class="progress-badge good">Good</span></td>
+              <td>⭐ 4.7</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="mentee-name-cell">
+                  <div class="mini-avatar">SL</div>
+                  <span>Sarah Lee</span>
+                </div>
+              </td>
+              <td>10 sessions</td>
+              <td>15.0 hrs</td>
+              <td>Nov 12, 2025</td>
+              <td><span class="progress-badge excellent">Excellent</span></td>
+              <td>⭐ 4.8</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="mentee-name-cell">
+                  <div class="mini-avatar">TW</div>
+                  <span>Tom Wilson</span>
+                </div>
+              </td>
+              <td>4 sessions</td>
+              <td>6.5 hrs</td>
+              <td>Nov 8, 2025</td>
+              <td><span class="progress-badge average">Average</span></td>
+              <td>⭐ 4.8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Focus Areas Analysis -->
+      <div class="widget-section">
+        <h3 class="section-header">🎯 Focus Areas & Topics Covered</h3>
+        <div class="focus-areas-grid">
+          <div class="focus-area-card">
+            <h4>Backend Development</h4>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+            <p class="focus-stats">12 sessions • 18 hours</p>
+          </div>
+          
+          <div class="focus-area-card">
+            <h4>Career Planning</h4>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+            <p class="focus-stats">8 sessions • 10 hours</p>
+          </div>
+          
+          <div class="focus-area-card">
+            <h4>Web Development</h4>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 60%;"></div>
+            </div>
+            <p class="focus-stats">5 sessions • 7.5 hours</p>
+          </div>
+          
+          <div class="focus-area-card">
+            <h4>Data Science & ML</h4>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 50%;"></div>
+            </div>
+            <p class="focus-stats">3 sessions • 7 hours</p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+    </body>
+</html>
