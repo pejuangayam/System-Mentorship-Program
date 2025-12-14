@@ -25,12 +25,12 @@
     <aside class="sidebar">
       <h3 class="role-title">Welcome, Mentor!</h3>
       <nav class="role-nav">
-        <a href="#" class="nav-item active-link">🏠 Dashboard</a>
-        <a href="#mentees" class="nav-item">👥 My Mentees</a>
-        <a href="#requests" class="nav-item">📩 Pending Requests <span class="badge">3</span></a>
-        <a href="#schedule" class="nav-item">📅 Schedule Meeting</a>
-        <a href="#announcements" class="nav-item">📢 Announcements</a>
-        <a href="#reporting" class="nav-item">📊 Report</a>
+        <a href="dashboardMentor.html" class="nav-item">🏠 Dashboard</a>
+        <a href="MyMentees.html" class="nav-item">👥 My Mentees</a>
+        <a href="PendingRequest.html" class="nav-item">📩 Pending Requests <span class="badge">3</span></a>
+        <a href="ScheduleMeeting.html" class="nav-item">📅 Schedule Meeting</a>
+        <a href="Announcement.html" class="nav-item">📢 Announcements</a>
+        <a href="Report.html" class="nav-item">📊 Report</a>
       </nav>
     </aside>
 
@@ -54,7 +54,7 @@
           
           <form id="profileForm" class="profile-form" action="#" method="POST">
             <div class="form-section">
-              <h3 class="section-title">Basic Information</h3>
+              <h3 class="section-title">Personal Information</h3>
               
               <div class="form-group">
                 <label for="fullName" class="form-label">Full Name *</label>
@@ -71,38 +71,81 @@
                 <input type="tel" id="phone" name="phone" class="form-input" value="+1 (555) 123-4567">
               </div>
               
-              <div class="form-group">
-                <label for="role" class="form-label">Role</label>
-                <input type="text" id="role" name="role" class="form-input" value="Mentor" disabled>
+            <div class="form-group">
+                <label for="joinDate" class="form-label">Member Since</label>
+                <input type="text" id="joinDate" name="joinDate" class="form-input" value="January 15, 2023" disabled>
               </div>
             </div>
-            
-            <div class="form-section">
-              <h3 class="section-title">Professional Information</h3>
               
-              <div class="form-group">
-                <label for="profession" class="form-label">Profession *</label>
-                <select id="profession" name="profession" class="form-select" required>
-                  <option value="">Select your profession</option>
-                  <option value="Information Technology" selected>Information Technology</option>
-                  <option value="Business">Business</option>
-                  <option value="Software Engineering">Software Engineering</option>
-                  <option value="Marketing">Marketing</option>
-                  <option value="UX/UI Design">UX/UI Design</option>
-                  <option value="Data Science">Data Science</option>
-                  <option value="Cybersecurity">Cybersecurity</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Project Management">Project Management</option>
-                </select>
-              </div>
-            </div>
             
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Update Profile</button>
-            </div>
-          </form>
+        <div class="form-section">
+          <h3 class="section-title">Professional Information</h3>
+
+          <div class="form-group">
+            <label for="profession1" class="form-label">Profession 1 *</label>
+            <select id="profession1" name="profession[]" class="form-select" required>
+              <option value="">Select profession</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Business">Business</option>
+              <option value="Software Engineering">Software Engineering</option>
+              <option value="Marketing">Marketing</option>
+              <option value="UX/UI Design">UX/UI Design</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="profession2" class="form-label">Profession 2</label>
+            <select id="profession2" name="profession[]" class="form-select">
+              <option value="">Select profession</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Business">Business</option>
+              <option value="Software Engineering">Software Engineering</option>
+              <option value="Marketing">Marketing</option>
+              <option value="UX/UI Design">UX/UI Design</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="profession3" class="form-label">Profession 3</label>
+            <select id="profession3" name="profession[]" class="form-select">
+              <option value="">Select profession</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Business">Business</option>
+              <option value="Software Engineering">Software Engineering</option>
+              <option value="Marketing">Marketing</option>
+              <option value="UX/UI Design">UX/UI Design</option>
+            </select>
+          </div>
+        </div>
+
+              
+    <div class="form-section">
+      <h3 class="form-section-title">Change Password</h3>
+
+      <div class="form-group">
+        <label for="currentPassword" class="form-label">Current Password</label>
+        <input type="password" id="currentPassword" name="currentPassword" class="form-input" placeholder="Enter current password">
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="newPassword" class="form-label">New Password</label>
+          <input type="password" id="newPassword" name="newPassword" class="form-input" placeholder="Enter new password (min. 8 characters)">
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Confirm new password">
         </div>
       </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Update Profile</button>
+    </div>
+    </form>
+    </div>
+    </div>
 
     </section>
     <!-- END CONTENT AREA -->
